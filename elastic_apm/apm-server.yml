@@ -1,0 +1,26 @@
+apm-server:
+  host: "elastic_apm:8200"
+  secret_token: "0419dbc8aabe4f8e8cd4a4dad9c0d0a8"
+  kibana:
+    host: "kibana:5601"
+    username: "elastic"
+    password: "changeme"
+    enabled: true
+  run:
+    enabled: true
+
+setup:
+  template:
+    settings:
+      index:
+        number_of_replicas: 0
+  kibana:
+    host: "kibana:5601"
+    username: "elastic"
+    password: "changeme"
+
+output:
+  elasticsearch:
+    hosts: ["elasticsearch:9200"]
+    username: "elastic"
+    password: "changeme"
